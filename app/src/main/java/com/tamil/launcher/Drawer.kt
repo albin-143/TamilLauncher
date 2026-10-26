@@ -21,7 +21,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.input.pointerInput
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
@@ -53,6 +53,9 @@ fun Drawer(vm: LauncherViewModel) {
     }
     val cols = if (vm.minimal) 1 else vm.cols
     val othersLabel = stringResource(R.string.others)
+    val recentLabel = stringResource(R.string.recent)
+    val mostUsedLabel = stringResource(R.string.most_used)
+    val contactsLabel = stringResource(R.string.contacts)
 
     Column(
         Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background.copy(alpha = vm.dim))
@@ -81,11 +84,11 @@ fun Drawer(vm: LauncherViewModel) {
         LazyVerticalGrid(GridCells.Fixed(cols), Modifier.weight(1f), contentPadding = PaddingValues(8.dp)) {
             if (q.isBlank()) {
                 if (recent.isNotEmpty()) {
-                    header(stringResource(R.string.recent))
+                    header(recentLabel)
                     items(recent, key = { "r" + it.pkg }) { AppTile(vm, it.pkg, Place.DRAWER) }
                 }
                 if (frequent.isNotEmpty()) {
-                    header(stringResource(R.string.most_used))
+                    header(mostUsedLabel)
                     items(frequent, key = { "f" + it.pkg }) { AppTile(vm, it.pkg, Place.DRAWER) }
                 }
                 when (vm.sortMode) {
@@ -101,7 +104,7 @@ fun Drawer(vm: LauncherViewModel) {
                 }
             } else {
                 items(filtered, key = { "s" + it.pkg }) { AppTile(vm, it.pkg, Place.DRAWER) }
-                header(stringResource(R.string.contacts))
+                header(contactsLabel)
                 if (!contactsOk) item(span = { GridItemSpan(maxLineSpan) }) {
                     TextButton({ askContacts.launch(android.Manifest.permission.READ_CONTACTS) }) { Text(stringResource(R.string.grant_contacts)) }
                 }
