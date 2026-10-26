@@ -81,6 +81,10 @@
     <string name="s_kiosk">Kiosk mode (hide Home / Back / Recents fully)</string>
     <string name="kiosk_need_owner">Kiosk needs Device Owner. Connect the phone to a PC with USB debugging on, remove extra accounts temporarily, and run:</string>
     <string name="kiosk_release">Release device owner (needed before uninstalling)</string>
+    <string name="s_gesturenav">Gesture navigation (Back / Home / Recents)</string>
+    <string name="gesturenav_help">Swipe in from the left or right edge = Back. Swipe up from the bottom = Home. Swipe up and hold = Recents. Turn on Tamil Launcher in Accessibility settings.</string>
+    <string name="gesturenav_enable">Open Accessibility settings</string>
+    <string name="gesture_desc">Lets Tamil Launcher perform Back, Home and Recents with edge swipes.</string>
     <string name="s_widgets">Widgets</string>
     <string name="add_widget">Add widget</string>
     <string name="select_widget">Choose a widget</string>

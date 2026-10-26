@@ -60,6 +60,7 @@ class LauncherViewModel(private val app: Application) : AndroidViewModel(app) {
     var badgesOn by pref("badges", true)
     var hideNav by pref("hideNav", true)
     var kiosk by pref("kiosk", false)
+    var gestureNav by pref("gestureNav", true)
     var pinHash by pref("pin", "")
     var hiddenRaw by pref("hidden", "")
     var lockedRaw by pref("locked", "")

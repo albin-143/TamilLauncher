@@ -165,6 +165,9 @@ fun SettingsScreen(vm: LauncherViewModel) {
                 SwitchRow(s(R.string.s_dbl), vm.dblLock) { vm.dblLock = it }
                 if (!isAdminActive(ctx)) OutlinedButton({ requestAdmin(ctx) }) { Text(s(R.string.s_admin)) }
                 SwitchRow(s(R.string.s_swipe_down), vm.swipeNotif) { vm.swipeNotif = it }
+                SwitchRow(s(R.string.s_gesturenav), vm.gestureNav) { vm.gestureNav = it }
+                Text(s(R.string.gesturenav_help), style = MaterialTheme.typography.bodySmall)
+                OutlinedButton({ ctx.startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)) }) { Text(s(R.string.gesturenav_enable)) }
 
                 Section(s(R.string.s_kiosk))
                 SwitchRow(s(R.string.s_kiosk), vm.kiosk) { on ->

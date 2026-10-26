@@ -81,6 +81,10 @@
     <string name="s_kiosk">கியாஸ்க் பயன்முறை (Home / Back / Recents முழுசா மறை)</string>
     <string name="kiosk_need_owner">கியாஸ்க்-க்கு Device Owner தேவை. USB debugging ஆன் பண்ணி phone-ஐ PC-ல இணைச்சு, கூடுதல் accounts-ஐ தற்காலிகமா நீக்கிட்டு, இதை ஓட்டுங்க:</string>
     <string name="kiosk_release">Device owner-ஐ விடுவி (uninstall பண்ணும் முன் தேவை)</string>
+    <string name="s_gesturenav">சைகை வழிசெலுத்தல் (Back / Home / Recents)</string>
+    <string name="gesturenav_help">இடது அல்லது வலது ஓரத்திலிருந்து உள்ளே இழுத்தால் Back. கீழிருந்து மேலே இழுத்தால் Home. மேலே இழுத்து பிடிச்சா Recents. Accessibility அமைப்புகளில் Tamil Launcher-ஐ ஆன் பண்ணுங்க.</string>
+    <string name="gesturenav_enable">Accessibility அமைப்புகளைத் திற</string>
+    <string name="gesture_desc">ஓரங்களில் இழுத்து Back, Home, Recents செய்ய Tamil Launcher-க்கு உதவும்.</string>
     <string name="s_widgets">விட்ஜெட்கள்</string>
     <string name="add_widget">விட்ஜெட் சேர்</string>
     <string name="select_widget">விட்ஜெட்டைத் தேர்ந்தெடு</string>
